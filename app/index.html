@@ -1,13 +1,19 @@
 <!doctype html>
 <html ng-app="cubeApp">
   <head>
-    <!-- inject:css -->
+    <!-- vendorcss:css -->
+    <!-- endinject -->
+    <!-- appcss:css -->
     <!-- endinject -->
   </head>
   <body>
+    <div ui-view="root"></div>
     <!-- vendorjs:js -->
     <!-- endinject -->
     <!-- appjs:js -->
     <!-- endinject -->
+    <!-- templates:js -->
+    <!-- endinject -->
+    <script>$(document).foundation();</script>
   </body>
 </html>
