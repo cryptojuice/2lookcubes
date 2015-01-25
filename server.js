@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('app'));
+app.use(express.static('public'));
 
 app.use(function(req, res, next) {
-  res.location('/#' + req.path())
+  res.location('/#' + req.path)
   .status(301)
   .send();
 });
