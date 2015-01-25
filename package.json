@@ -1,0 +1,40 @@
+{
+  "name": "2lookcubes",
+  "version": "0.0.1",
+  "description": "Rubiks 2look OLL/PLL memorization game",
+  "main": "server.js",
+  "dependencies": {
+    "bower": "^1.3.12",
+    "gulp": "^3.8.10",
+    "mocha": "^2.1.0"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "karma": "^0.12.31",
+    "karma-chai-sinon": "^0.1.4",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-mocha": "^0.1.10",
+    "sinon": "^1.12.2",
+    "sinon-chai": "^2.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cryptojuice/2lookcubes.git"
+  },
+  "keywords": [
+    "Rubik",
+    "Rubiks",
+    "2look",
+    "OLL",
+    "PLL"
+  ],
+  "author": "Nick Robinson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cryptojuice/2lookcubes/issues"
+  },
+  "homepage": "https://github.com/cryptojuice/2lookcubes"
+}
