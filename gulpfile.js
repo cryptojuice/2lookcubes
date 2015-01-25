@@ -31,7 +31,7 @@ gulp.task('build:appjs', ['clean:build'], function() {
 gulp.task('build:appcss', ['clean:build'], function() {
   return gulp.src(manifest.appCSS)
     .pipe(sass())
-    .pipe(concat('app.css'))
+    .pipe(concat('styles.css'))
     .pipe(rev())
     .pipe(gulp.dest(buildDir));
 });
@@ -56,7 +56,7 @@ gulp.task('build:vendorcss', ['clean:build'], function() {
     .pipe(gulp.dest(buildDir));
 });
 
-gulp.task('build:inject', ['build:templatecache', 'build:appjs', 'build:appcss', 'build:vendorjs', 'build:vendorcss'], function() {
+gulp.task('build:inject', ['build:appimages', 'build:templatecache', 'build:appjs', 'build:appcss', 'build:vendorjs', 'build:vendorcss'], function() {
   return gulp.src(manifest.appIndex)
     .pipe(inject(gulp.src(buildDir + '/vendor*.js', { read: false }), { name: 'vendorjs', ignorePath: 'public' }))
     .pipe(inject(gulp.src(buildDir + '/app*.js', { read: false }), { name: 'appjs', ignorePath: 'public' }))
@@ -66,8 +66,7 @@ gulp.task('build:inject', ['build:templatecache', 'build:appjs', 'build:appcss',
     .pipe(gulp.dest(buildDir));
 });
 
-gulp.task('build', ['build:appimages', 'build:inject'], function() {
-});
+gulp.task('build', ['build:inject']);
 
 gulp.task('watch', ['build:inject'], function() {
   directories = [].concat(manifest.appIndex, manifest.appJS, manifest.appCSS, manifest.appTemplates).map(function(myPath) {

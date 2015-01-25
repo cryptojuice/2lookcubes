@@ -1,5 +1,24 @@
 <div class="row">
-  <div class="small-6 small-centered columns end">
-    <h2>Root template</h2>
+  <div class="small-9 small-centered columns end">
+    <h2>1. Edge Orientation</h2>
+    <ul class="small-block-grid-3">
+      <li ng-repeat="orientation in ollList.edge">
+        <h4 ng-bind="orientation.name" ></h4>
+        <img ng-src="/images/{{orientation.image}}"/>
+        <p ng-repeat="algorithm in orientation.algorithms" ng-bind="algorithm"></p>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="small-9 small-centered columns end">
+    <h2>2. Corner Orientation</h2>
+    <ul class="small-block-grid-3">
+      <li ng-repeat="orientation in ollList.corner">
+        <h4 ng-bind="orientation.name" ></h4>
+        <img ng-src="/images/{{orientation.image}}"/>
+        <p ng-repeat="algorithm in orientation.algorithms" ng-bind="algorithm"></p>
+      </li>
+    </ul>
   </div>
 </div>
