@@ -9,7 +9,25 @@ cubeApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
         templateUrl: 'home/root.template.html'
       }
     },
+  })
+  .state('root.oll', {
+    url: 'oll',
+    views: {
+      oll: {
+        controller: 'RootController',
+        templateUrl: 'oll_view/oll.template.html'
+      }
+    },
+  })
+  .state('root.pll', {
+    url: 'pll',
+    views: {
+      oll: {
+        controller: 'RootController',
+        templateUrl: 'pll_view/pll.template.html'
+      }
+    },
   });
 
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/oll');
 }]);
