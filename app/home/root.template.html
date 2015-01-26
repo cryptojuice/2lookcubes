@@ -1,24 +1,11 @@
 <div class="row">
-  <div class="small-9 small-centered columns end">
-    <h2>1. Edge Orientation</h2>
-    <ul class="small-block-grid-3">
-      <li ng-repeat="orientation in ollList.edge">
-        <h4 ng-bind="orientation.name" ></h4>
-        <img ng-src="/images/{{orientation.image}}"/>
-        <p ng-repeat="algorithm in orientation.algorithms" ng-bind="algorithm"></p>
-      </li>
+  <div class="small-6 small-centered columns end">
+    <ul class="button-group">
+      <li><a ui-sref="root.oll" class="button">2-Look OLL</a></li>
+      <li><a ui-sref="root.pll" class="button">2-Look PLL</a></li>
+      <li><a href="#" class="button" disabled>Learner</a></li>
     </ul>
   </div>
 </div>
-<div class="row">
-  <div class="small-9 small-centered columns end">
-    <h2>2. Corner Orientation</h2>
-    <ul class="small-block-grid-3">
-      <li ng-repeat="orientation in ollList.corner">
-        <h4 ng-bind="orientation.name" ></h4>
-        <img ng-src="/images/{{orientation.image}}"/>
-        <p ng-repeat="algorithm in orientation.algorithms" ng-bind="algorithm"></p>
-      </li>
-    </ul>
-  </div>
-</div>
+<div ui-view="oll"></div>
+<div ui-view="pll"></div>
